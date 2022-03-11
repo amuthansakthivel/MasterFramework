@@ -1,5 +1,6 @@
-package com.tmb.config;
+package com.tmb.config.factory;
 
+import com.tmb.config.FrameworkConfig;
 import org.aeonbits.owner.ConfigCache;
 
 public final class ConfigFactory {

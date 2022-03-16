@@ -12,7 +12,6 @@ public final class SelenoidChromeManager {
     public static WebDriver getDriver() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("browserName", "chrome");
-        capabilities.setCapability("browserVersion", "97.0");
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", false);
         return new RemoteWebDriver(ConfigFactory.getConfig()

@@ -3,7 +3,8 @@ package com.tmb.config;
 import com.tmb.config.converters.*;
 import com.tmb.enums.BrowserRemoteModeType;
 import com.tmb.enums.BrowserType;
-import com.tmb.enums.RunModeBrowserType;
+import com.tmb.enums.MobileRemoteModeType;
+import com.tmb.enums.RunModeType;
 import org.aeonbits.owner.Config;
 
 import java.net.URL;
@@ -22,7 +23,7 @@ public interface FrameworkConfig extends Config {
 
     @Key("runModeBrowser")
     @ConverterClass(StringToRunModeBrowserTypeConverter.class)
-    RunModeBrowserType browserRunMode();
+    RunModeType browserRunMode();
 
     @Key("browserRemoteMode")
     @ConverterClass(StringToRemoteModeBrowserTypeConverter.class)
@@ -30,11 +31,11 @@ public interface FrameworkConfig extends Config {
 
     @Key("runModeMobile")
     @ConverterClass(StringToRunModeBrowserTypeConverter.class)
-    RunModeBrowserType mobileRunMode();
+    RunModeType mobileRunMode();
 
     @Key("mobileRemoteMode")
     @ConverterClass(StringToMobileRemoteModeTypeConverter.class)
-    BrowserRemoteModeType mobileRemoteMode();
+    MobileRemoteModeType mobileRemoteMode();
 
     @ConverterClass(StringToURLConverter.class)
     URL seleniumGridURL();

@@ -1,7 +1,6 @@
 package com.tmb.driver.manager.mobile.local;
 
 import com.tmb.config.factory.ConfigFactory;
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;

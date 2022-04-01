@@ -11,7 +11,7 @@ public final class BrowserStackAndroidManager {
 
     public static WebDriver getDriver(){
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
+        capabilities.setCapability("app", "bs://067b3d9696fb162c26cd37417fa5cf1a64cdcc87");
         capabilities.setCapability("device", "Google Pixel 3");
         capabilities.setCapability("os_version", "9.0");
         capabilities.setCapability("project", "First Java Project");

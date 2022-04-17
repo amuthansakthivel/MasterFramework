@@ -1,10 +1,11 @@
 package com.tmb.driver.factory;
 
 import com.tmb.driver.*;
-import com.tmb.driver.entity.MobileDriverData;
-import com.tmb.driver.entity.WebDriverData;
+import com.tmb.driver.impl.mobile.LocalMobileDriverImpl;
+import com.tmb.driver.impl.mobile.RemoteMobileDriverImpl;
+import com.tmb.driver.impl.web.LocalWebDriverImpl;
+import com.tmb.driver.impl.web.RemoteWebDriverImpl;
 import com.tmb.enums.RunModeType;
-import org.openqa.selenium.WebDriver;
 
 import java.util.EnumMap;
 import java.util.Map;

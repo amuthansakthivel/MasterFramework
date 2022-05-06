@@ -15,12 +15,6 @@ public final class DriverManager {
 
     private DriverManager(){}
 
-    // web --> mobile
-    // web --> mobile --> web
-    //1. Web 2. Mob
-    //List, Map  --> WEB, WEBDRIVERTHREADLOCAL ; MOBILE, MOBILE_DRIVER_THREAD_LOCAL
-    //At a particular instance, context --> WEB, MOBILE
-
     private static final ThreadLocal<WebDriver> WEB_DRIVER_THREAD_LOCAL = new ThreadLocal<>();
     private static final ThreadLocal<WebDriver> MOBILE_DRIVER_THREAD_LOCAL = new ThreadLocal<>();
     private static final ThreadLocal<PlatformType> CONTEXT = withInitial(()-> WEB);

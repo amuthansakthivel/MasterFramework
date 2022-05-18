@@ -1,14 +1,12 @@
 package com.tmb.fixtures.addusers.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @ToString
+@Builder
 public class UserData {
 
     private String userRole;

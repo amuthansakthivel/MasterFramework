@@ -6,11 +6,12 @@ import br.com.six2six.fixturefactory.loader.TemplateLoader;
 import com.tmb.fixtures.addusers.entity.UserData;
 
 public class AddUserTemplate implements TemplateLoader {
+
     @Override
     public void load() {
         Fixture.of(UserData.class).addTemplate("valid",new Rule(){{
             add("userRole",random("ESS","Admin"));
-            add("employeeName",uniqueRandom("Aaliyah Haq","Admin A"));
+            add("employeeName",uniqueRandom("Aaliyah Haq","Admin A","Amuthan"));
             add("userName",random("abcdef1234"));
             add("status",random("Enabled","Disabled"));
             add("password",random("Password@123"));

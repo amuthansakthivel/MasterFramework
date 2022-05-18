@@ -1,6 +1,6 @@
 package com.tmb.pages.pagecomponents.adduserspage;
 
-import com.tmb.fixtures.addusers.AddUsersScenarioType;
+import com.tmb.fixtures.addusers.entity.UserData;
 import org.openqa.selenium.By;
 
 import static com.tmb.utils.PageActionsHelper.select;
@@ -48,7 +48,12 @@ public class AddUserComponent {
         return true;
     }
 
-    public boolean fillDetails(AddUsersScenarioType addUsersScenarioType){
-        return addUsersScenarioType.getPredicate().test(this,addUsersScenarioType.getUserData());
+    public void fillDetails(UserData userData){
+        setUserRoleDropDown(userData.getUserRole())
+                .setUserNameTextBox(userData.getUserName())
+                .setPasswordTextBox(userData.getPassword())
+                .setConfirmPasswordTextBox(userData.getPassword())
+                .setStatusDropDown(userData.getStatus())
+                .setEmployeeNameTextBox(userData.getEmployeeName());
     }
 }

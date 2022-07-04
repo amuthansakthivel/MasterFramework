@@ -2,7 +2,8 @@ package com.tmb.pages;
 
 import org.openqa.selenium.By;
 
-import static com.tmb.utils.PageActionsHelper.*;
+import static com.tmb.utils.PageActionsHelper.waitAndClick;
+import static com.tmb.utils.PageActionsHelper.waitAndSendKeys;
 
 public class LoginPage {
 

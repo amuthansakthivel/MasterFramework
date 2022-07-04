@@ -1,7 +1,10 @@
 package com.tmb.pages.pagecomponents.adduserspage;
 
+import com.tmb.driver.DriverManager;
 import com.tmb.fixtures.addusers.entity.UserData;
 import org.openqa.selenium.By;
+
+import java.util.function.BiPredicate;
 
 import static com.tmb.utils.PageActionsHelper.select;
 import static com.tmb.utils.PageActionsHelper.waitAndSendKeys;
@@ -14,6 +17,8 @@ public class AddUserComponent {
     private static final By USER_NAME_TEXT_BOX = By.xpath("//label[text()='Username']/following-sibling::input");
     private static final By PASSWORD_TEXT_BOX = By.xpath("//label[text()='Password']/following-sibling::input");
     private static final By CONFIRM_PASSWORD_TEXT_BOX = By.xpath("//label[text()='Confirm Password']/following-sibling::input");
+    private static final By ERROR_MESSAGE_FOR_EMPLOYEE_NAME = By.xpath("//span[@for='systemUser_employeeName_empName']");
+
 
     public AddUserComponent setUserRoleDropDown(String userRole) {
         select(USER_ROLE_DROP_DOWN, e->e.selectByVisibleText(userRole));
@@ -44,16 +49,16 @@ public class AddUserComponent {
         return this;
     }
 
+    public boolean isErrorDisplayedForEmployeeName() {
+        return DriverManager.getDriver().findElement(ERROR_MESSAGE_FOR_EMPLOYEE_NAME).getText()
+                .equalsIgnoreCase("Employee does not exist");
+    }
+
     public boolean isSuccessMessageDisplayed(){
         return true;
     }
 
-    public void fillDetails(UserData userData){
-        setUserRoleDropDown(userData.getUserRole())
-                .setUserNameTextBox(userData.getUserName())
-                .setPasswordTextBox(userData.getPassword())
-                .setConfirmPasswordTextBox(userData.getPassword())
-                .setStatusDropDown(userData.getStatus())
-                .setEmployeeNameTextBox(userData.getEmployeeName());
+    public boolean fillDetails(UserData userData, BiPredicate<UserData, AddUserComponent> predicate){ //pass the behavior
+        return predicate.test(userData, this);
     }
 }

@@ -17,8 +17,8 @@ public class AddUserTemplate implements TemplateLoader {
             add("password",random("Password@123"));
         }});
 
-        Fixture.of(UserData.class).addTemplate("just_username",new Rule(){{
-            add("userName",random("abcdef1234"));
+        Fixture.of(UserData.class).addTemplate("just_employeename",new Rule(){{
+            add("employeeName",random("abcdef1234"));
         }});
     }
 }

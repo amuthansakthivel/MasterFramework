@@ -27,9 +27,16 @@
         <noexception.version>1.7.1</noexception.version>
         <fixture.factory.version>3.1.0</fixture.factory.version>
         <reflection.version>0.10.2</reflection.version>
+        <junit.jupiter.version>5.8.2</junit.jupiter.version>
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.jupiter.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>org.reflections</groupId>

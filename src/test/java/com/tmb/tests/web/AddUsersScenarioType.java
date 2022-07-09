@@ -1,6 +1,7 @@
 package com.tmb.tests.web;
 
 import br.com.six2six.fixturefactory.Fixture;
+import br.com.six2six.fixturefactory.loader.FixtureFactoryLoader;
 import com.tmb.fixtures.addusers.entity.UserData;
 import com.tmb.pages.pagecomponents.adduserspage.AddUserComponent;
 import lombok.Getter;

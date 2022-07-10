@@ -23,4 +23,7 @@ public class PageActionsHelper {
     public static void select(By by, Consumer<Select> consumer){
         consumer.accept(new Select(DriverManager.getDriver().findElement(by)));
     }
+
+
+
 }

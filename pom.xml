@@ -26,8 +26,12 @@
         <awaitility.version>4.1.1</awaitility.version>
         <noexception.version>1.7.1</noexception.version>
         <fixture.factory.version>3.1.0</fixture.factory.version>
+<<<<<<< HEAD
+        <healenium.web.version>3.2.4</healenium.web.version>
+=======
         <reflection.version>0.10.2</reflection.version>
         <junit.jupiter.version>5.8.2</junit.jupiter.version>
+>>>>>>> 2b92d532fcdfe6fa0a701c23b5badf107db1685f
     </properties>
 
     <dependencies>
@@ -48,6 +52,12 @@
             <groupId>br.com.six2six</groupId>
             <artifactId>fixture-factory</artifactId>
             <version>${fixture.factory.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.epam.healenium</groupId>
+            <artifactId>healenium-web</artifactId>
+            <version>${healenium.web.version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.machinezoo.noexception/noexception -->

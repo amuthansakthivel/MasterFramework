@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true"
+    <test verbose="2"
           name="/Users/amuthansakthivel/IdeaProjects/MasterFramework/src/test/java/com/tmb/tests/web/AddUsersTest.java">
         <classes>
-            <class name="com.tmb.tests.web.AddUsersTest"/>
+            <class name="com.tmb.tests.web.base.users.AddUsersTest"/>
         </classes>
     </test>
 </suite>

@@ -1,4 +1,4 @@
-package com.tmb.tests.web;
+package com.tmb.tests.web.base.users;
 
 import com.tmb.pages.LoginPage;
 import com.tmb.tests.web.base.WebBase;

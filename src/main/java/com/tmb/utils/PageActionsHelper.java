@@ -2,9 +2,12 @@ package com.tmb.utils;
 
 import com.tmb.driver.DriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class PageActionsHelper {
 
@@ -24,6 +27,13 @@ public class PageActionsHelper {
         consumer.accept(new Select(DriverManager.getDriver().findElement(by)));
     }
 
+    public static String getAttribute(By by, Function<WebElement,String> attributeFunction){
+        return attributeFunction.apply(DriverManager.getDriver().findElement(by));
+    }
+
+    public static boolean isPresent(By by, Predicate<WebElement> elementPredicate){
+        return elementPredicate.test(DriverManager.getDriver().findElement(by));
+    }
 
 
 }

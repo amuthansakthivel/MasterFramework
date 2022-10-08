@@ -2,10 +2,10 @@ package com.tmb.tests.web.base.homepage;
 
 import com.tmb.pages.LoginPage;
 import com.tmb.pages.validator.HomePageValidator;
-import com.tmb.tests.web.base.WebBase;
+import com.tmb.tests.web.base.WebSetup;
 import org.junit.jupiter.api.Test;
 
-class HomePageTest extends WebBase {
+class HomePageTest extends WebSetup {
 
     @Test
     void testHomePageComponents(){

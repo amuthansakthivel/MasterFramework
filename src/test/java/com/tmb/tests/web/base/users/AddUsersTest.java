@@ -1,12 +1,12 @@
 package com.tmb.tests.web.base.users;
 
 import com.tmb.pages.LoginPage;
-import com.tmb.tests.web.base.WebBase;
+import com.tmb.tests.web.base.WebSetup;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
-class AddUsersTest extends WebBase {
+class AddUsersTest extends WebSetup {
 
     @ParameterizedTest
     @EnumSource(value = AddUsersScenarioType.class,

@@ -7,7 +7,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
-public class WebBase extends Base {
+public class WebSetup extends Base {
 
     @BeforeAll
     public static void beforeAll(){

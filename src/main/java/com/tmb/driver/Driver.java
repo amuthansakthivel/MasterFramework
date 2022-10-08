@@ -28,8 +28,8 @@ public final class Driver {
     public static void loadURL(){
         DriverManager.getDriver().get(getConfig().webUrl());
     }
-    public static void initDriverForMobile(){
-        MobileDriverData driverData = new MobileDriverData(MobilePlatformType.ANDROID
+    public static void initDriverForMobile(MobilePlatformType mobilePlatformType){
+        MobileDriverData driverData = new MobileDriverData(mobilePlatformType
                 ,getConfig().mobileRemoteMode());
         WebDriver driver = DriverFactory
                 .getDriverForMobile(getConfig().mobileRunMode())

@@ -1,4 +1,4 @@
-package com.tmb.pages.enums.topmenucomponent;
+package com.tmb.pages.web.topmenucomponent;
 
 public enum MenuType {
 

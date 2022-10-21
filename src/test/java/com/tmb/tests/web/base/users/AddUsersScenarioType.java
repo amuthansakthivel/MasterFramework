@@ -2,7 +2,7 @@ package com.tmb.tests.web.base.users;
 
 import br.com.six2six.fixturefactory.Fixture;
 import com.tmb.fixtures.addusers.entity.UserData;
-import com.tmb.pages.pagecomponents.adduserspage.AddUserComponent;
+import com.tmb.pages.web.pagecomponents.adduserspage.AddUserComponent;
 import lombok.Getter;
 
 import java.util.function.BiPredicate;

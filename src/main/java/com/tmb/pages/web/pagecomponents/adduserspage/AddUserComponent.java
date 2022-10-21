@@ -1,4 +1,4 @@
-package com.tmb.pages.pagecomponents.adduserspage;
+package com.tmb.pages.web.pagecomponents.adduserspage;
 
 import com.tmb.driver.DriverManager;
 import com.tmb.fixtures.addusers.entity.UserData;

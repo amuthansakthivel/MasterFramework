@@ -1,6 +1,6 @@
 package com.tmb.tests.web.base.homepage;
 
-import com.tmb.pages.validator.HomePageValidator;
+import com.tmb.pages.web.validator.HomePageValidator;
 import org.assertj.core.api.AbstractAssert;
 import org.assertj.core.api.SoftAssertions;
 

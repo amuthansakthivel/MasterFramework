@@ -1,7 +1,7 @@
 package com.tmb.tests.web.base.homepage;
 
-import com.tmb.pages.LoginPage;
-import com.tmb.pages.validator.HomePageValidator;
+import com.tmb.pages.web.LoginPage;
+import com.tmb.pages.web.validator.HomePageValidator;
 import com.tmb.tests.web.base.WebSetup;
 import org.junit.jupiter.api.Test;
 

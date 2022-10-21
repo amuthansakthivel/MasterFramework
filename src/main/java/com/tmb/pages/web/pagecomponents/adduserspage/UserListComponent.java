@@ -1,4 +1,4 @@
-package com.tmb.pages.pagecomponents.adduserspage;
+package com.tmb.pages.web.pagecomponents.adduserspage;
 
 import com.tmb.utils.PageActionsHelper;
 import org.openqa.selenium.By;

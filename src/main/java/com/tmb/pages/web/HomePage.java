@@ -1,9 +1,9 @@
-package com.tmb.pages;
+package com.tmb.pages.web;
 
-import com.tmb.pages.enums.topmenucomponent.MenuType;
-import com.tmb.pages.enums.topmenucomponent.SubMenuType;
-import com.tmb.pages.pagecomponents.homepage.TopMenuComponent;
-import com.tmb.pages.validator.HomePageValidator;
+import com.tmb.pages.web.topmenucomponent.MenuType;
+import com.tmb.pages.web.topmenucomponent.SubMenuType;
+import com.tmb.pages.web.pagecomponents.homepage.TopMenuComponent;
+import com.tmb.pages.web.validator.HomePageValidator;
 import com.tmb.utils.PageActionsHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

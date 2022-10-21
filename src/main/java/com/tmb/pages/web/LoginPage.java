@@ -1,4 +1,4 @@
-package com.tmb.pages;
+package com.tmb.pages.web;
 
 import org.openqa.selenium.By;
 

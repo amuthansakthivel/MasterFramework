@@ -1,7 +1,7 @@
-package com.tmb.pages.pagecomponents.homepage;
+package com.tmb.pages.web.pagecomponents.homepage;
 
-import com.tmb.pages.enums.topmenucomponent.MenuType;
-import com.tmb.pages.enums.topmenucomponent.SubMenuType;
+import com.tmb.pages.web.topmenucomponent.MenuType;
+import com.tmb.pages.web.topmenucomponent.SubMenuType;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 

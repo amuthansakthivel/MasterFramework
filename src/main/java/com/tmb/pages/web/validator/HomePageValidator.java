@@ -1,4 +1,4 @@
-package com.tmb.pages.validator;
+package com.tmb.pages.web.validator;
 
 import lombok.Builder;
 import lombok.Getter;

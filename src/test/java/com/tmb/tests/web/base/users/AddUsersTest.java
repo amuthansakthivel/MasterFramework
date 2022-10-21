@@ -1,6 +1,6 @@
 package com.tmb.tests.web.base.users;
 
-import com.tmb.pages.LoginPage;
+import com.tmb.pages.web.LoginPage;
 import com.tmb.tests.web.base.WebSetup;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;

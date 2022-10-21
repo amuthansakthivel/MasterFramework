@@ -1,7 +1,7 @@
-package com.tmb.pages;
+package com.tmb.pages.web;
 
-import com.tmb.pages.pagecomponents.adduserspage.UserListComponent;
-import com.tmb.pages.pagecomponents.adduserspage.SearchComponent;
+import com.tmb.pages.web.pagecomponents.adduserspage.UserListComponent;
+import com.tmb.pages.web.pagecomponents.adduserspage.SearchComponent;
 
 public class SystemUserPage {
 

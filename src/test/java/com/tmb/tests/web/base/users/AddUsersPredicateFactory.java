@@ -1,7 +1,7 @@
 package com.tmb.tests.web.base.users;
 
 import com.tmb.fixtures.addusers.entity.UserData;
-import com.tmb.pages.pagecomponents.adduserspage.AddUserComponent;
+import com.tmb.pages.web.pagecomponents.adduserspage.AddUserComponent;
 
 import java.util.HashMap;
 import java.util.Map;

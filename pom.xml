@@ -14,11 +14,9 @@
         <owner.version>1.0.12</owner.version>
         <appium.java.version>7.6.0</appium.java.version>
         <extentreport.version>5.0.8</extentreport.version>
-        <restassured.version>4.5.0</restassured.version>
+        <restassured.version>5.2.0</restassured.version>
         <jackson.version>2.13.1</jackson.version>
-        <testdatasupplier.version>1.9.7</testdatasupplier.version>
         <assertjcore.version>3.21.0</assertjcore.version>
-        <testng.version>7.4.0</testng.version>
         <webdrivermanager.version>5.0.3</webdrivermanager.version>
         <selenium.version>3.141.59</selenium.version>
         <lombok.version>1.18.20</lombok.version>
@@ -98,22 +96,11 @@
         </dependency>
 
         <dependency>
-            <groupId>io.github.sskorol</groupId>
-            <artifactId>test-data-supplier</artifactId>
-            <version>${testdatasupplier.version}</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>${assertjcore.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>${testng.version}</version>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
@@ -142,5 +129,16 @@
 
     </dependencies>
 
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <reuseForks>false</reuseForks>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

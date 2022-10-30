@@ -2,14 +2,21 @@ package com.tmb.tests.mobile;
 
 import com.tmb.pages.mobile.HomeScreen;
 import com.tmb.tests.mobile.base.AndroidSetup;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
-public class AndroidTest extends AndroidSetup {
+import static com.tmb.pages.mobile.enums.ViewsScreenMenuItemType.*;
+
+class AndroidTest extends AndroidSetup {
+
+    /*
+    Please refer mobile test
+     */
 
     @Test
-    public void testLoginAndroid() {
+    void testLoginAndroid() {
         HomeScreen.getHomeScreenInstance()
                 .navigateToViewsScreen()
-                .clickViewScreenElement("WebView");
+                .clickOnViewScreenElement(WEB_VIEW);
+        //assertion
     }
 }

@@ -1,10 +1,7 @@
 package com.tmb.config;
 
 import com.tmb.config.converters.*;
-import com.tmb.enums.BrowserRemoteModeType;
-import com.tmb.enums.BrowserType;
-import com.tmb.enums.MobileRemoteModeType;
-import com.tmb.enums.RunModeType;
+import com.tmb.enums.*;
 import org.aeonbits.owner.Config;
 
 import java.net.URL;
@@ -55,5 +52,7 @@ public interface FrameworkConfig extends Config {
     @DefaultValue("http://127.0.0.1:4723/wd/hub")
     URL localAppiumServerURL();
 
-
+    @ConverterClass(StringToMobilePlatformTypeConverter.class)
+    @DefaultValue("ios")
+    MobilePlatformType mobilePlatformType();
 }

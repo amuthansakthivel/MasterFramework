@@ -1,13 +1,21 @@
 package com.tmb.tests.mobile;
 
+import com.tmb.pages.mobile.IosHomeScreen;
 import com.tmb.tests.mobile.base.IosSetup;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
-public class IosTest extends IosSetup {
+class IosTest extends IosSetup {
+
+    /*
+    Please refer mobile test
+     */
 
     @Test
-    public void testLoginIos() {
+    void testLoginIos() {
+        IosHomeScreen.getInstance()
+                .addANewTask();
 
+        //add assertion
     }
 
 }

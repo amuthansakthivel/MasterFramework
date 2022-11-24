@@ -1,18 +1,14 @@
 package com.tmb.tests.api;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tmb.api.ReqresApi;
 import com.tmb.api.pojos.UserDetails;
 import com.tmb.api.pojos.UserResponseDetails;
 import com.tmb.tests.api.assertwrapper.ResponseAssert;
 import com.tmb.tests.api.testdata.UserTestData;
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.function.Predicate;
 

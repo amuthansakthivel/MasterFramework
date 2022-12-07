@@ -8,6 +8,6 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public class WebDriverData {
-    private BrowserType browserType;
-    private BrowserRemoteModeType browserRemoteModeType;
+  private BrowserType browserType;
+  private BrowserRemoteModeType browserRemoteModeType;
 }

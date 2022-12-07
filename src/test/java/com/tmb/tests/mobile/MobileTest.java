@@ -10,28 +10,28 @@ import static com.tmb.pages.mobile.enums.ViewsScreenMenuItemType.WEB_VIEW;
 
 class MobileTest extends MobileSetUp {
 
-    @AndroidTest
-    void testLoginAndroid() {
-        HomeScreen.getHomeScreenInstance()
-                .navigateToViewsScreen()
-                .clickOnViewScreenElement(WEB_VIEW);
-        //assertion
-    }
+  @AndroidTest
+  void testLoginAndroid() {
+    HomeScreen.getHomeScreenInstance()
+      .navigateToViewsScreen()
+      .clickOnViewScreenElement(WEB_VIEW);
+    //assertion
+  }
 
-    @IosTest
-    void testLoginIos() {
-        IosHomeScreen.getInstance()
-                .addANewTask();
+  @IosTest
+  void testLoginIos() {
+    IosHomeScreen.getInstance()
+      .addANewTask();
 
-        //add assertion
-    }
+    //add assertion
+  }
 
-    @AndroidTest
-    @IosTest
-    void testLoginBoth() {
-        HomeScreen.getHomeScreenInstance()
-                .navigateToViewsScreen()
-                .clickOnViewScreenElement(WEB_VIEW);
-        //assertion
-    }
+  @AndroidTest
+  @IosTest
+  void testLoginBoth() {
+    HomeScreen.getHomeScreenInstance()
+      .navigateToViewsScreen()
+      .clickOnViewScreenElement(WEB_VIEW);
+    //assertion
+  }
 }

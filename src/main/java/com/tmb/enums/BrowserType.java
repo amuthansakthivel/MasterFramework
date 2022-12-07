@@ -1,6 +1,6 @@
 package com.tmb.enums;
 
 public enum BrowserType {
-    CHROME,
-    FIREFOX
+  CHROME,
+  FIREFOX
 }

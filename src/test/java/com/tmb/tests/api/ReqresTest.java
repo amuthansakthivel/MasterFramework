@@ -14,33 +14,33 @@ import java.util.function.Predicate;
 
 class ReqresTest {
 
-    @Test
-    void testListUsersApi(){ //Intention -> Make a api call and get the response
-        //AAA
-        Response response = ReqresApi.getUsers();
-        int actualStatusCode = response.statusCode();
+  @Test
+  void testListUsersApi() { //Intention -> Make a api call and get the response
+    //AAA
+    Response response = ReqresApi.getUsers();
+    int actualStatusCode = response.statusCode();
 
-        Assertions.assertThat(actualStatusCode)
-                .isEqualTo(200);
-        //Assertion
-    }
+    Assertions.assertThat(actualStatusCode)
+      .isEqualTo(200);
+    //Assertion
+  }
 
-    @Test
-    void postNewUser() throws IOException {
-        UserDetails userDetails = UserTestData.getUserDetails();
-        Response response = ReqresApi.postUsers(userDetails);
+  @Test
+  void postNewUser() throws IOException {
+    UserDetails userDetails = UserTestData.getUserDetails();
+    Response response = ReqresApi.postUsers(userDetails);
 
-        Predicate<Response> predicate = res -> res.jsonPath()
-                .getString("job")
-                .equalsIgnoreCase("leader");
+    Predicate<Response> predicate = res -> res.jsonPath()
+      .getString("job")
+      .equalsIgnoreCase("leader");
 
-        ResponseAssert.assertThat(response)
-                .statusCodeIs(201)
-                .canBeDeserializedTo(UserResponseDetails.class)
-                .hasKeyWithValue("job","leader")
-                .hasKeyWithValue(predicate)
-                .hasContentType("application/json; charset=utf-8")
-                .assertAll();
+    ResponseAssert.assertThat(response)
+      .statusCodeIs(201)
+      .canBeDeserializedTo(UserResponseDetails.class)
+      .hasKeyWithValue("job", "leader")
+      .hasKeyWithValue(predicate)
+      .hasContentType("application/json; charset=utf-8")
+      .assertAll();
 
         /*
         status code
@@ -48,6 +48,6 @@ class ReqresTest {
         body value
         contentType
          */
-    }
+  }
 
 }

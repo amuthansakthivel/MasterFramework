@@ -13,20 +13,20 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ViewsScreen {
 
-    public ViewsScreen(){
-        PageFactory.initElements(new AppiumFieldDecorator(DriverManager.getDriver()), this);
-    }
+  public ViewsScreen() {
+    PageFactory.initElements(new AppiumFieldDecorator(DriverManager.getDriver()), this);
+  }
 
-    @iOSXCUITFindBy(xpath = "")
-    @AndroidFindBy(accessibility = "WebView")
-    private MobileElement textboxEmail;
+  @iOSXCUITFindBy(xpath = "")
+  @AndroidFindBy(accessibility = "WebView")
+  private MobileElement textboxEmail;
 
-    private static final String VIEW_SCREEN_ELEMENT = "%s";
+  private static final String VIEW_SCREEN_ELEMENT = "%s";
 
-    public void clickOnViewScreenElement(ViewsScreenMenuItemType element){
-        By accessibilityId = MobileBy.AccessibilityId(String.format(VIEW_SCREEN_ELEMENT, element.getName()));
-        PageActionsHelper.scrollForMobile(textboxEmail);
-        PageActionsHelper.waitAndClick(accessibilityId);
-    }
+  public void clickOnViewScreenElement(ViewsScreenMenuItemType element) {
+    By accessibilityId = MobileBy.AccessibilityId(String.format(VIEW_SCREEN_ELEMENT, element.getName()));
+    PageActionsHelper.scrollForMobile(textboxEmail);
+    PageActionsHelper.waitAndClick(accessibilityId);
+  }
 
 }

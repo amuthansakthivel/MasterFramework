@@ -11,13 +11,13 @@ public class AndroidSetup {
     Please check MobileSetup
      */
 
-    @BeforeEach
-    public void setUp(){
-        Driver.initDriverForMobile(MobilePlatformType.ANDROID);
-    }
+  @BeforeEach
+  public void setUp() {
+    Driver.initDriverForMobile(MobilePlatformType.ANDROID);
+  }
 
-    @AfterEach
-    public void tearDown(){
-        Driver.quitDriver();
-    }
+  @AfterEach
+  public void tearDown() {
+    Driver.quitDriver();
+  }
 }

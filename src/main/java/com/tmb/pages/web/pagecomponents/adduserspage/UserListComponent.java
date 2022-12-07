@@ -3,12 +3,12 @@ package com.tmb.pages.web.pagecomponents.adduserspage;
 import com.tmb.utils.PageActionsHelper;
 import org.openqa.selenium.By;
 
-    public class UserListComponent {
+public class UserListComponent {
 
-    private static final By ADD_BUTTON = By.id("btnAdd");
+  private static final By ADD_BUTTON = By.id("btnAdd");
 
-    public AddUserComponent setAddButton() {
-        PageActionsHelper.waitAndClick(ADD_BUTTON);
-        return new AddUserComponent();
-    }
+  public AddUserComponent setAddButton() {
+    PageActionsHelper.waitAndClick(ADD_BUTTON);
+    return new AddUserComponent();
+  }
 }

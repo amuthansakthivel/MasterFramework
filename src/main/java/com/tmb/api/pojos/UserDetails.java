@@ -7,6 +7,6 @@ import lombok.experimental.Accessors;
 @Data
 public class UserDetails {
 
-    private String name;
-    private String job;
+  private String name;
+  private String job;
 }

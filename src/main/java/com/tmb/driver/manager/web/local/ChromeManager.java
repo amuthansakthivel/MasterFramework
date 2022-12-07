@@ -6,11 +6,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public final class ChromeManager {
 
-    private ChromeManager(){}
+  private ChromeManager() {
+  }
 
-    public static WebDriver getDriver(){
-        WebDriverManager.chromedriver()
-                .setup();
-        return new ChromeDriver();
-    }
+  public static WebDriver getDriver() {
+    WebDriverManager.chromedriver()
+      .setup();
+    return new ChromeDriver();
+  }
 }

@@ -8,18 +8,18 @@ import org.junit.jupiter.api.BeforeEach;
 
 public class WebSetup {
 
-    @BeforeAll
-    public static void beforeAll(){
-        FixtureFactoryLoader.loadTemplates("com.tmb.fixtures");
-    }
+  @BeforeAll
+  public static void beforeAll() {
+    FixtureFactoryLoader.loadTemplates("com.tmb.fixtures");
+  }
 
-    @BeforeEach
-    public void setUp(){
-        Driver.initDriverForWeb();
-    }
+  @BeforeEach
+  public void setUp() {
+    Driver.initDriverForWeb();
+  }
 
-    @AfterEach
-    public void tearDown(){
-        Driver.quitDriver();
-    }
+  @AfterEach
+  public void tearDown() {
+    Driver.quitDriver();
+  }
 }

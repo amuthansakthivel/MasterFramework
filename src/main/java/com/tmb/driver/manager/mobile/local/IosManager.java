@@ -11,15 +11,16 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 public final class IosManager {
 
-    private IosManager(){}
+  private IosManager() {
+  }
 
-    public static WebDriver getDriver(){
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(CapabilityType.PLATFORM_NAME, Platform.IOS);
-        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 13 Pro Max");
-        capabilities.setCapability(MobileCapabilityType.APP,
-                System.getProperty("user.dir")+"/ios-app.zip");
-        return new IOSDriver<IOSElement>(ConfigFactory.getConfig().localAppiumServerURL(),capabilities);
-    }
+  public static WebDriver getDriver() {
+    DesiredCapabilities capabilities = new DesiredCapabilities();
+    capabilities.setCapability(CapabilityType.PLATFORM_NAME, Platform.IOS);
+    capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
+    capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 13 Pro Max");
+    capabilities.setCapability(MobileCapabilityType.APP,
+                               System.getProperty("user.dir") + "/ios-app.zip");
+    return new IOSDriver<IOSElement>(ConfigFactory.getConfig().localAppiumServerURL(), capabilities);
+  }
 }

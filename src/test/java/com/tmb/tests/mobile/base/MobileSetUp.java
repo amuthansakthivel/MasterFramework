@@ -8,16 +8,16 @@ import org.junit.jupiter.api.BeforeEach;
 
 public class MobileSetUp {
 
-    private final MobilePlatformType mobilePlatformType = ConfigFactory.getConfig()
-            .mobilePlatformType();
+  private final MobilePlatformType mobilePlatformType = ConfigFactory.getConfig()
+    .mobilePlatformType();
 
-    @BeforeEach
-    public void setUp(){
-        Driver.initDriverForMobile(mobilePlatformType);
-    }
+  @BeforeEach
+  public void setUp() {
+    Driver.initDriverForMobile(mobilePlatformType);
+  }
 
-    @AfterEach
-    public void tearDown(){
-        Driver.quitDriver();
-    }
+  @AfterEach
+  public void tearDown() {
+    Driver.quitDriver();
+  }
 }

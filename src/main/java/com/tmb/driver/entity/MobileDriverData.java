@@ -9,6 +9,6 @@ import lombok.Getter;
 @Getter
 public class MobileDriverData {
 
-    private MobilePlatformType mobilePlatformType;
-    private MobileRemoteModeType mobileRemoteModeType;
+  private MobilePlatformType mobilePlatformType;
+  private MobileRemoteModeType mobileRemoteModeType;
 }

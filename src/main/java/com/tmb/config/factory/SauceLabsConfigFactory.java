@@ -5,9 +5,10 @@ import org.aeonbits.owner.ConfigCache;
 
 public final class SauceLabsConfigFactory {
 
-    private SauceLabsConfigFactory(){}
+  private SauceLabsConfigFactory() {
+  }
 
-    public static SauceLabsConfig getConfig(){
-        return ConfigCache.getOrCreate(SauceLabsConfig.class);
-    }
+  public static SauceLabsConfig getConfig() {
+    return ConfigCache.getOrCreate(SauceLabsConfig.class);
+  }
 }

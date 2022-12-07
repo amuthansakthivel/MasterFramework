@@ -7,9 +7,9 @@ import java.lang.reflect.Method;
 import java.net.URL;
 
 public class StringToURLConverter implements Converter<URL> {
-    @SneakyThrows
-    @Override
-    public URL convert(Method method, String stringURL) {
-        return new URL(stringURL);
-    }
+  @SneakyThrows
+  @Override
+  public URL convert(Method method, String stringURL) {
+    return new URL(stringURL);
+  }
 }

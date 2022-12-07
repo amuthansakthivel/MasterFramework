@@ -7,17 +7,17 @@ import java.net.URL;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
-        "file:${user.dir}/src/test/resources/sauce-labs.properties"
+  "file:${user.dir}/src/test/resources/sauce-labs.properties"
 })
 public interface SauceLabsConfig extends Config {
 
-    @Key("username")
-    String userName();
+  @Key("username")
+  String userName();
 
-    String key();
+  String key();
 
-    @DefaultValue("saucelabsendpoint")
-    @ConverterClass(StringToURLConverter.class)
-    URL sauceLabsURL();
+  @DefaultValue("saucelabsendpoint")
+  @ConverterClass(StringToURLConverter.class)
+  URL sauceLabsURL();
 
 }

@@ -10,12 +10,12 @@ class IosTest extends IosSetup {
     Please refer mobile test
      */
 
-    @Test
-    void testLoginIos() {
-        IosHomeScreen.getInstance()
-                .addANewTask();
+  @Test
+  void testLoginIos() {
+    IosHomeScreen.getInstance()
+      .addANewTask();
 
-        //add assertion
-    }
+    //add assertion
+  }
 
 }

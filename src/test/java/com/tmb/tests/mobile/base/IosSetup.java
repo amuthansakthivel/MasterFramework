@@ -11,13 +11,13 @@ public class IosSetup {
     Please check MobileSetup
      */
 
-    @BeforeEach
-    public void setUp(){
-        Driver.initDriverForMobile(MobilePlatformType.IOS);
-    }
+  @BeforeEach
+  public void setUp() {
+    Driver.initDriverForMobile(MobilePlatformType.IOS);
+  }
 
-    @AfterEach
-    public void tearDown(){
-        Driver.quitDriver();
-    }
+  @AfterEach
+  public void tearDown() {
+    Driver.quitDriver();
+  }
 }

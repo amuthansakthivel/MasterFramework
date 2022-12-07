@@ -8,12 +8,13 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public final class SeleniumGridChromeManager {
 
-    private SeleniumGridChromeManager(){}
+  private SeleniumGridChromeManager() {
+  }
 
-    public static WebDriver getDriver() {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setBrowserName(BrowserType.CHROME);
-        return new RemoteWebDriver(ConfigFactory.getConfig()
-                .seleniumGridURL(), capabilities);
-    }
+  public static WebDriver getDriver() {
+    DesiredCapabilities capabilities = new DesiredCapabilities();
+    capabilities.setBrowserName(BrowserType.CHROME);
+    return new RemoteWebDriver(ConfigFactory.getConfig()
+                                 .seleniumGridURL(), capabilities);
+  }
 }

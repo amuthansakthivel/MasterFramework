@@ -5,9 +5,10 @@ import org.aeonbits.owner.ConfigCache;
 
 public final class BrowserStackConfigFactory {
 
-    private BrowserStackConfigFactory(){}
+  private BrowserStackConfigFactory() {
+  }
 
-    public static BrowserStackConfig getConfig(){
-        return ConfigCache.getOrCreate(BrowserStackConfig.class);
-    }
+  public static BrowserStackConfig getConfig() {
+    return ConfigCache.getOrCreate(BrowserStackConfig.class);
+  }
 }

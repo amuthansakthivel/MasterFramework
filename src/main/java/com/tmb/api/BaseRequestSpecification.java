@@ -7,14 +7,15 @@ import io.restassured.specification.RequestSpecification;
 
 public final class BaseRequestSpecification {
 
-    private BaseRequestSpecification(){}
+  private BaseRequestSpecification() {
+  }
 
-    private static final String BASE_URL = ApiConfigFactory.getConfig().apiBaseUrl();
+  private static final String BASE_URL = ApiConfigFactory.getConfig().apiBaseUrl();
 
-    public static RequestSpecification getDefaultRequestSpec(){
-        return RestAssured
-                .given()
-                .contentType(ContentType.JSON)
-                .baseUri(BASE_URL);
-    }
+  public static RequestSpecification getDefaultRequestSpec() {
+    return RestAssured
+      .given()
+      .contentType(ContentType.JSON)
+      .baseUri(BASE_URL);
+  }
 }

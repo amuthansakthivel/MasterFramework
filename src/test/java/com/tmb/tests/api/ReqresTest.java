@@ -22,7 +22,7 @@ class ReqresTest {
 
     Assertions.assertThat(actualStatusCode)
       .isEqualTo(200);
-    //Assertion
+    //Assertions
   }
 
   @Test

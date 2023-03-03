@@ -1,13 +1,13 @@
 package com.tmb.pages.mobile;
 
 import com.tmb.utils.PageActionsHelper;
-import io.appium.java_client.MobileBy;
+import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
 
 public class IosHomeScreen {
 
-  // Java client version < 8.x
-  private static final By ADD_TASK = MobileBy.AccessibilityId("plus.circle");
+  // Java client version > 8.x
+  private static final By ADD_TASK = AppiumBy.accessibilityId("plus.circle");
 
   private IosHomeScreen() {
   }

@@ -3,12 +3,12 @@ package com.tmb.pages.mobile;
 import com.tmb.driver.DriverManager;
 import com.tmb.pages.mobile.enums.ViewsScreenMenuItemType;
 import com.tmb.utils.PageActionsHelper;
-import io.appium.java_client.MobileBy;
-import io.appium.java_client.MobileElement;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class ViewsScreen {
@@ -19,12 +19,12 @@ public class ViewsScreen {
 
   @iOSXCUITFindBy(xpath = "")
   @AndroidFindBy(accessibility = "WebView")
-  private MobileElement textboxEmail;
+  private WebElement textboxEmail;
 
   private static final String VIEW_SCREEN_ELEMENT = "%s";
 
   public void clickOnViewScreenElement(ViewsScreenMenuItemType element) {
-    By accessibilityId = MobileBy.AccessibilityId(String.format(VIEW_SCREEN_ELEMENT, element.getName()));
+    By accessibilityId = AppiumBy.accessibilityId(String.format(VIEW_SCREEN_ELEMENT, element.getName()));
     PageActionsHelper.scrollForMobile(textboxEmail);
     PageActionsHelper.waitAndClick(accessibilityId);
   }

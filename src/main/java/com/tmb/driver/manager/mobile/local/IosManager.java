@@ -2,12 +2,8 @@ package com.tmb.driver.manager.mobile.local;
 
 import com.tmb.config.factory.ConfigFactory;
 import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.ios.IOSElement;
-import io.appium.java_client.remote.MobileCapabilityType;
-import org.openqa.selenium.Platform;
+import io.appium.java_client.ios.options.XCUITestOptions;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 public final class IosManager {
 
@@ -15,12 +11,9 @@ public final class IosManager {
   }
 
   public static WebDriver getDriver() {
-    DesiredCapabilities capabilities = new DesiredCapabilities();
-    capabilities.setCapability(CapabilityType.PLATFORM_NAME, Platform.IOS);
-    capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
-    capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 13 Pro Max");
-    capabilities.setCapability(MobileCapabilityType.APP,
-                               System.getProperty("user.dir") + "/ios-app.zip");
-    return new IOSDriver<IOSElement>(ConfigFactory.getConfig().localAppiumServerURL(), capabilities);
+    XCUITestOptions options = new XCUITestOptions();
+    options.setDeviceName("iPhone 13 Pro Max")
+      .setApp(System.getProperty("user.dir") + "/ios-app.zip");
+    return new IOSDriver(ConfigFactory.getConfig().localAppiumServerURL(), options);
   }
 }

@@ -1,19 +1,18 @@
 package com.tmb.utils;
 
 import com.tmb.driver.DriverManager;
-import io.appium.java_client.PerformsTouchActions;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidTouchAction;
-import io.appium.java_client.ios.IOSTouchAction;
-import io.appium.java_client.touch.WaitOptions;
-import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -106,25 +105,17 @@ public class PageActionsHelper {
     int startY = size.getHeight() / 2;
     int endY = (int) (size.getHeight() * 0.25);
 
-    if (isAndroid()) performScrollForAndroid(startX, startY, endX, endY);
-    else performScrollForIOS(startX, startY, endX, endY);
+    performScrollUsingSequence(startX, startY, endX, endY);
   }
 
-  private static void performScrollForAndroid(int startX, int startY, int endX, int endY) {
-    new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver())
-      .press(PointOption.point(startX, startY))
-      .waitAction(WaitOptions.waitOptions(Duration.ofMillis(200)))
-      .moveTo(PointOption.point(endX, endY))
-      .release()
-      .perform();
-  }
+  private static void performScrollUsingSequence(int startX, int startY, int endX, int endY) {
+    PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "first-finger");
+    Sequence sequence = new Sequence(finger, 0)
+      .addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), startX, startY))
+      .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
+      .addAction(finger.createPointerMove(Duration.ofMillis(300), PointerInput.Origin.viewport(), endX, endY))
+      .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 
-  private static void performScrollForIOS(int startX, int startY, int endX, int endY) {
-    new IOSTouchAction((PerformsTouchActions) DriverManager.getDriver())
-      .press(PointOption.point(startX, startY))
-      .waitAction(WaitOptions.waitOptions(Duration.ofMillis(200)))
-      .moveTo(PointOption.point(endX, endY))
-      .release()
-      .perform();
+    ((AppiumDriver)(DriverManager.getDriver())).perform(Collections.singletonList(sequence));
   }
 }

@@ -19,7 +19,7 @@
         <assertjcore.version>3.21.0</assertjcore.version>
         <webdrivermanager.version>5.0.3</webdrivermanager.version>
         <selenium.version>3.141.59</selenium.version>
-        <lombok.version>1.18.20</lombok.version>
+        <lombok.version>1.18.28</lombok.version>
         <javafaker.version>1.0.2</javafaker.version>
         <awaitility.version>4.1.1</awaitility.version>
         <noexception.version>1.7.1</noexception.version>

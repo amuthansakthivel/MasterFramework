@@ -15,7 +15,7 @@
         <appium.java.version>8.3.0</appium.java.version>
         <extentreport.version>5.0.8</extentreport.version>
         <restassured.version>5.2.0</restassured.version>
-        <jackson.version>2.13.1</jackson.version>
+        <jackson.version>2.15.2</jackson.version>
         <assertjcore.version>3.21.0</assertjcore.version>
         <webdrivermanager.version>5.0.3</webdrivermanager.version>
         <selenium.version>3.141.59</selenium.version>

@@ -12,7 +12,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <owner.version>1.0.12</owner.version>
-        <appium.java.version>8.3.0</appium.java.version>
+        <appium.java.version>8.5.1</appium.java.version>
         <extentreport.version>5.0.8</extentreport.version>
         <restassured.version>5.2.0</restassured.version>
         <jackson.version>2.13.1</jackson.version>

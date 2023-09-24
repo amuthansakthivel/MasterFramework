@@ -22,7 +22,7 @@
         <lombok.version>1.18.20</lombok.version>
         <javafaker.version>1.0.2</javafaker.version>
         <awaitility.version>4.1.1</awaitility.version>
-        <noexception.version>1.7.1</noexception.version>
+        <noexception.version>1.9.0</noexception.version>
         <fixture.factory.version>3.1.0</fixture.factory.version>
         <reflection.version>0.10.2</reflection.version>
         <junit.jupiter.version>5.8.2</junit.jupiter.version>

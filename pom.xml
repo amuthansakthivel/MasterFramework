@@ -16,7 +16,7 @@
         <extentreport.version>5.0.8</extentreport.version>
         <restassured.version>5.2.0</restassured.version>
         <jackson.version>2.13.1</jackson.version>
-        <assertjcore.version>3.21.0</assertjcore.version>
+        <assertjcore.version>3.24.2</assertjcore.version>
         <webdrivermanager.version>5.0.3</webdrivermanager.version>
         <selenium.version>3.141.59</selenium.version>
         <lombok.version>1.18.20</lombok.version>
